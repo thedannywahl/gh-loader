@@ -6,7 +6,7 @@ import { process } from "./process.ts";
 export const load = async (list: List): Promise<void> => {
 	const { version } = packageJSON as PackageJSON;
 
-	log("group", `%cgh-loader ${version}`, "font-weight: bold");
+	log("group", `%cgh-loader ${version}`, "color: inherit; font-weight: bold;");
 
 	if (!list || (Array.isArray(list) && list.length === 0)) {
 		log("warn", "No Gist ID or repository file path provided.");

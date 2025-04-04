@@ -37,7 +37,7 @@ export const log = (...args: LogArgs): void => {
 
 		const logMethod = getLogMethod(type);
 		if (type === "group" || type === "groupCollapsed") {
-			logMethod(...logArgs);
+			logMethod(...rest);
 		} else if (type === "groupEnd") {
 			console.groupEnd();
 		} else {
