@@ -6,8 +6,12 @@ export default defineConfig({
 		lib: {
 			entry: resolve(__dirname, "src/main.ts"),
 			name: "gh",
-			fileName: "ghl.min",
-		},
+			fileName: (format) => {
+				if (format === "umd") {
+						return `ghl.umd.min.js`;
+				}
+				return `ghl.${format}.js`;
+		},		},
 		outDir: "dist",
 		minify: "terser",
 		terserOptions: {
