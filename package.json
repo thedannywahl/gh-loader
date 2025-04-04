@@ -1,0 +1,33 @@
+{
+  "name": "gh-loader",
+  "private": true,
+  "version": "4.0.0",
+  "description": "Load js and CSS files from GitHub",
+  "main": "gh-loader.min.js",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm ts && pnpm test && pnpm lint && vite build && pnpm dlx terser dist/ghl.min.js -o dist/ghl.min.js --compress --mangle && rm dist/default.js",
+    "coverage": "vitest run --coverage",
+    "test": "vitest run",
+    "lint": "biome check --write",
+    "ts": "tsc -p ."
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-import-attributes": "^7.26.0",
+    "@biomejs/biome": "1.9.4",
+    "@types/node": "^22.14.0",
+    "@vitest/coverage-v8": "3.1.1",
+    "terser": "^5.39.0",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.5",
+    "vitest": "^3.1.1"
+  },
+  "author": "@thedannywahl",
+  "license": "ISC",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@biomejs/biome",
+      "esbuild"
+    ]
+  }
+}
