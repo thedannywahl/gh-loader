@@ -31,13 +31,15 @@ load([
 
 ### ES Module
 
-1. Edit `ghl.min.js` and change the string in `load()` to point to your files.
-2. Add `ghl.min.js` to your site.
+1. [Download ghl.min.js](https://raw.githubusercontent.com/thedannywahl/gh-loader/refs/heads/main/dist/ghl.min.js)
+2. Edit `ghl.min.js` and change the string in `load()` to point to your files.
+3. Add `ghl.min.js` to your site.
 
 ### UMD
 
-1. Edit `ghl.min.umd.cjs` and change the string at the end of the IIFE statement to point to your files.
-Add `ghl.min.umd.cjs` to your site
+1. [Download ghl.min.umd.cjs](https://raw.githubusercontent.com/thedannywahl/gh-loader/refs/heads/main/dist/ghl.min.umd.cjs)
+2. Edit `ghl.min.umd.cjs` and change the string at the end of the IIFE statement to point to your files.
+3. Add `ghl.min.umd.cjs` to your site
 
 ### Build
 
