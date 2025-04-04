@@ -1,12 +1,12 @@
 {
   "name": "gh-loader",
   "private": true,
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Load js and CSS files from GitHub",
   "main": "gh-loader.min.js",
   "type": "module",
   "scripts": {
-    "build": "pnpm ts && pnpm test && pnpm lint && vite build && pnpm dlx terser dist/ghl.min.js -o dist/ghl.min.js --compress --mangle && rm dist/default.js",
+    "build": "pnpm ts && pnpm test && pnpm lint && vite build && sed -i '' '1s/^/const gh = {};/g' dist/ghl.es.js && pnpm dlx terser dist/ghl.es.js -o dist/ghl.es.min.js --compress --mangle && rm dist/default.js",
     "coverage": "vitest run --coverage",
     "test": "vitest run",
     "lint": "biome check --write",
